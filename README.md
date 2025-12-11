@@ -1,6 +1,3 @@
-Basat en el teu projecte "Control per Veu", et proporciono una estructura completa per al README.md professional i guies per al manual d'usuari.
-
-## README.md Professional
 
 ```markdown
 # Control per Veu
