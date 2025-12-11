@@ -1,79 +1,190 @@
+Basat en el teu projecte "Control per Veu", et proporciono una estructura completa per al README.md professional i guies per al manual d'usuari.
+
+## README.md Professional
+
+```markdown
+# Control per Veu
+
+Aplicació d'escriptori que permet controlar funcionalitats mitjançant comandes de veu en català. Desenvolupada amb Electron i Vue.js, aquesta aplicació demostra la integració del Web Speech API en un entorn d'escriptori per a una interfície d'usuari accessible i innovadora.
+
+## Tecnologies Utilitzades
+
+| Tecnologia | Versió | Propòsit |
+|------------|---------|---------|
+| **Electron** | 39.2.6 | Framework d'aplicacions d'escriptori |
+| **Vue.js** | 3.5.21 | Framework frontend per a UI reactiva |
+| **Vuetify** | 3.10.1 | Biblioteca de components Material Design |
+| **Vite** | 7.1.5 | Eina de construcció i servidor de desenvolupament |
+| **Vue Router** | 4.5.1 | Enrutament client-side |
+| **Web Speech API** | - | Reconeixement de veu natiu del navegador |
+
+## Instruccions d'Instal·lació i Execució
+
+### Requisits previs
+- Node.js (versió 18 o superior)
+- npm, yarn, pnpm o bun
+
+### Instal·lació
+```bash
+# Clonar el repositori
+git clone https://github.com/maatiasnc/Control-per-Veu-Matias.git
+cd Control-per-Veu-Matias
+
+# Instal·lar dependències
+npm install
+```
+
+### Execució en mode desenvolupament
+```bash
+npm run dev
+```
+Aquest comandament iniciarà simultàniament el servidor Vite (port 5173) i l'aplicació Electron amb recàrrega automàtica.
+
+### Construcció per a producció
+```bash
+npm run build
+```
+Això generarà l'aplicació empaquetada a la carpeta `dist/`.
+
+## Ús Bàsic de l'Aplicació
+
+L'aplicació permet controlar funcions mitjançant comandes de veu en català:
+
+### Comandes disponibles
+- **"saluda"** - Mostra un missatge de benvinguda
+- **"ajuda"** - Mostra les comandes disponibles
+- **"mode fosc"** - Activa el tema fosc
+- **"mode clar"** - Activa el tema clar
+- **"esborra"** o **"borrar"** - Netetja la pantalla
+
+### Com utilitzar
+1. Inicia l'aplicació
+2. Fes clic al botó d'activació de veu
+3. Pronuncia una de les comandes en català
+4. L'aplicació respondrà visualment a la teva comanda
+
+## Estructura del Projecte
+
+```
+Control-per-Veu-Matias/
+├── electron/
+│   └── main.js          # Procés principal d'Electron
+├── src/
+│   ├── components/      # Components Vue automàticament importats
+│   ├── pages/          # Pàgines de l'aplicació
+│   └── main.js         # Punt d'entrada de Vue
+├── package.json        # Dependències i scripts
+└── README.md          # Aquest fitxer
+```
+
+## Llicència
+MIT License
+```
+
+## Manual d'Usuari (MANUAL_USUARI.pdf)
+
+### Estructura recomanada (1 pàgina):
+
+**Títol:** Manual d'Usuari - Control per Veu
+
+**Secció 1: Què és aquesta aplicació?**
+- Explicació senzilla: "Una aplicació que escolta la teva veu per executar accions"
+- Imatge de la interfície principal
+
+**Secció 2: Començar a utilitzar-la**
+1. "Obre l'aplicació fent doble clic"
+2. "Prem el botó gran que diu 'Començar'"
+3. "Parla clarament en català"
+4. "L'aplicació respondrà immediatament"
+
+**Secció 3: Comandes que pots dir**
+- Llista visual amb icones:
+  - 🗣️ "Digues 'saluda' per rebre un salutació"
+  - 🌙 "Digues 'mode fosc' per canviar a fons fosc"
+  - ☀️ "Digues 'mode clar' per canviar a fons clar"
+  - 🧹 "Digues 'esborra' per netejar la pantalla"
+
+**Secció 4: Consells**
+- "Parla de manera natural i clara"
+- "Assegura't que el micròfon funciona"
+- "Si alguna cosa no funciona, prova a repetir la comanda"
+
+## Notes
+
+- El README actual del projecte és una plantilla genèrica de Vuetify que no reflecteix la funcionalitat real del projecte de control per veu [1](#0-0) .
+- El projecte utilitza `concurrently` per executar tant el servidor Vite com Electron simultàniament en mode desenvolupament [2](#0-1) .
+- La lògica de reconeixement de veu es troba a `src/pages/index.vue` i utilitza el Web Speech API amb configuració per a català (`ca-ES`) [3](#0-2) .
+- Les comandes de veu es processen mitjançant un watcher que reacciona als canvis en el transcript reconegut [4](#0-3) .
+
+Wiki pages you might want to explore:
+- [Overview (maatiasnc/Control-per-Veu-Matias)](/wiki/maatiasnc/Control-per-Veu-Matias#1)
+
+### Citations
+
+**File:** README.md (L1-4)
+```markdown
 # Vuetify (Default)
 
 This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
 
-## ❗️ Important Links
-
-- 📄 [Docs](https://vuetifyjs.com/)
-- 🚨 [Issues](https://issues.vuetifyjs.com/)
-- 🏬 [Store](https://store.vuetifyjs.com/)
-- 🎮 [Playground](https://play.vuetifyjs.com/)
-- 💬 [Discord](https://community.vuetifyjs.com)
-
-## 💿 Install
-
-Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
-
-| Package Manager                                                | Command        |
-|---------------------------------------------------------------|----------------|
-| [yarn](https://yarnpkg.com/getting-started)                   | `yarn install` |
-| [npm](https://docs.npmjs.com/cli/v7/commands/npm-install)     | `npm install`  |
-| [pnpm](https://pnpm.io/installation)                          | `pnpm install` |
-| [bun](https://bun.sh/#getting-started)                        | `bun install`  |
-
-After completing the installation, your environment is ready for Vuetify development.
-
-## ✨ Features
-
-- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
-- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/), the intuitive, modular state management solution for Vue.
-- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and vite-plugin-vue-layouts for organizing Vue file layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
-- 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
-
-These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
-
-## 💡 Usage
-
-This section covers how to start the development server and build your project for production.
-
-### Starting the Development Server
-
-To start the development server with hot-reload, run the following command. The server will be accessible at [http://localhost:3000](http://localhost:3000):
-
-```bash
-yarn dev
 ```
 
-(Repeat for npm, pnpm, and bun with respective commands.)
-
-> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that happen as part of the Vuetify import mapping. If you are on Node [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the warning, you can remove this from your package.json dev script.
-
-### Building for Production
-
-To build your project for production, use:
-
-```bash
-yarn build
+**File:** package.json (L8-10)
+```json
+    "dev": "concurrently \"npm:dev:vite\" \"npm:dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .",
 ```
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+**File:** src/pages/index.vue (L13-20)
+```vue
+const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = null;
 
-Once the build process is completed, your application will be ready for deployment in a production environment.
+if (Recognition) {
+  recognition = new Recognition();
+  recognition.lang = 'ca-ES';
+  recognition.continuous = false; // Es para quan detecta una frase final
+  recognition.interimResults = true;
+```
 
-## 💪 Support Vuetify Development
+**File:** src/pages/index.vue (L72-108)
+```vue
+watch(transcript, (newText) => {
+  if (!newText) return;
+  const command = newText.toLowerCase().trim();
+  
+  showSnackbar.value = false;
 
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
-
-- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
-- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
-- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
-- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
-- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
-- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
-- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
-
-## 📑 License
-[MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2016-present Vuetify, LLC
+  if (command.includes('saluda')) {
+    uiMessage.value = "Hola! Benvingut a l'aplicació.";
+    statusColor.value = "success";
+  } 
+  else if (command.includes('ajuda')) {
+    uiMessage.value = "Pots dir: 'Saluda', 'Mode fosc', 'Esborra'...";
+    statusColor.value = "info";
+  }
+  else if (command.includes('esborra') || command.includes('borrar')) {
+    uiMessage.value = "Esperant comanda...";
+    statusColor.value = "primary";
+  }
+  else if (command.includes('mode fosc')) {
+    theme.global.name.value = 'dark';
+    uiMessage.value = "Mode fosc activat ";
+    statusColor.value = "primary"; 
+  }
+  else if (command.includes('mode clar')) {
+    theme.global.name.value = 'light';
+    uiMessage.value = "Mode clar activat";
+    statusColor.value = "primary";
+  }
+  else {
+    uiMessage.value = `No he entès: "${newText}"`;
+    statusColor.value = "warning";
+    
+    // Configuració Snackbar
+    snackbarText.value = `Comanda desconeguda: "${newText}"`;
+    showSnackbar.value = true;
+  }
+});
+```
